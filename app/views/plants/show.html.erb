@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @plant.name %></h1>
+  <p><%= @plant.description %></p>
+  <%= image_tag(@plant.photo) if @plant.photo.attached? %>
+  <%= link_to "All Plants", plants_path %>
+  <% if current_user == @plant.owner %>
+    <%= link_to "Edit", edit_plant_path(@plant) %>
+    <%= link_to "Delete Plant", "" %>
+    <% else %>
+  <% end %>
+</div>

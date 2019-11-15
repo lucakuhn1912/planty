@@ -4,4 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :plants, foreign_key: "owner_id", class_name: "Plant"
+  has_one_attached :photo
 end
