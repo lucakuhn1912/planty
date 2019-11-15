@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+
+    <%= simple_form_for(@plant) do |f| %>
+      <%= f.input :name, placeholder: "What is ypur plants name?", label: false %>
+      <%= f.input :description, placeholder: "Describe your plant.", label: false %>
+      <%= f.input :location, placeholder: "Where does your plant live?", label: false %>
+      <%= f.input :price_per_day, placeholder: "How much does your plant charge per day?", label: false %>
+      <%= f.input :picture, as: :file %>
+      <%= f.submit "Add Plant", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>
+
+
