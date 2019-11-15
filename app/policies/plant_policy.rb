@@ -13,7 +13,7 @@ class PlantPolicy < ApplicationPolicy
   end
 
   def update?
-    record.owner == user
+    user_is_owner_or_admin?
   end
 
   def new?
@@ -22,5 +22,15 @@ class PlantPolicy < ApplicationPolicy
 
   def create?
     return true
+  end
+
+  def destroy?
+    user_is_owner_or_admin?
+  end
+
+  private
+
+  def user_is_owner_or_admin?
+    record.owner == user
   end
 end

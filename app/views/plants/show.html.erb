@@ -3,9 +3,10 @@
   <p><%= @plant.description %></p>
   <%= image_tag(@plant.photo) if @plant.photo.attached? %>
   <%= link_to "All Plants", plants_path %>
-  <% if current_user == @plant.owner %>
+  <% if policy(@plant).edit? %>
     <%= link_to "Edit", edit_plant_path(@plant) %>
-    <%= link_to "Delete Plant", "" %>
-    <% else %>
+  <% end %>
+  <% if policy(@plant).destroy? %>
+    <%= link_to "Delete Plant", plant_path(@plant), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %>
   <% end %>
 </div>
