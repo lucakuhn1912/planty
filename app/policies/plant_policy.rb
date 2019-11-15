@@ -3,6 +3,9 @@ class PlantPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+
+    # Display only plants of owner
+    # scope.where(user: user)
   end
 
   def show?
