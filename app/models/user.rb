@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :plants, foreign_key: "owner_id", class_name: "Plant"
   has_one_attached :photo
+  has_many :bookings
 end

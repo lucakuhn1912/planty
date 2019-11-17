@@ -49,7 +49,8 @@ class BookingsController < ApplicationController
   end
 
   def found_booking
-    Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def booking_params
