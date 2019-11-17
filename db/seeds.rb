@@ -38,7 +38,7 @@ barnie.save
 sophia = Plant.new(
   name: 'Sophia',
   description: 'Great indoor plant, which doesnt need much water or light',
-  location: 'London',
+  location: '56 Herefort Road, London',
   price_per_day: 12,
   availability:true,
   owner: User.first,
@@ -53,7 +53,7 @@ sophia.save
 peter = Plant.new(
   name: 'Peter',
   description: 'Needs lots of attention, sunlight but not too much, and likes to take a shower with you once a week',
-  location: 'London',
+  location: '153 Kingsland Road, London',
   price_per_day: 15,
   availability: true,
   owner: User.last,
@@ -68,7 +68,7 @@ peter.save
 florence = Plant.new(
   name: 'Florence',
   description: 'She is a real sun lover, leave her in direct sunlight and water twice a week',
-  location: 'London',
+  location: 'Drayton Gardens 1a, London',
   price_per_day: 8,
   availability: true,
   owner: User.last,
@@ -83,7 +83,7 @@ florence.save
 angus = Plant.new(
   name: 'Angus',
   description: 'Angus likes the dry air, he is more suitable inside near a fireplace, does not need much water',
-  location: 'London',
+  location: '12 Swallow Street, London',
   price_per_day: 8,
   availability: true,
   owner: User.first,

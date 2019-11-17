@@ -1,7 +1,14 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
   def index
-    @plants = policy_scope(Plant).order(created_at: :asc)
+    @plants = policy_scope(Plant).order(created_at: :asc).where.not(latitude: nil, longitude: nil)
+
+    @markers = @plants.map do |plant|
+      {
+        lat: plant.latitude,
+        lng: plant.longitude
+      }
+    end
   end
 
   def show
