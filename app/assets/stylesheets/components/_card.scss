@@ -45,10 +45,16 @@
   }
 }
 
-.plant-img {
-  height: 150px;
-  width: 100%;
+.plant-img img {
+  width: 320px;
+  height: 300px;
   object-fit: cover;
+  border: solid 4px $medium-green;
+  border-radius: 40px;
+}
+
+.plant-info {
+  padding-right: 16px;
 }
 
 .card-trip h2 {

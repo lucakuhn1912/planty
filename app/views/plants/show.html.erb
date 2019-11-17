@@ -1,10 +1,14 @@
 <div class="container">
 
-
-  <h1><%= @plant.name %></h1>
-  <p><%= @plant.description %></p>
-  <div class="show-img">
-    <%= image_tag(@plant.photo) if @plant.photo.attached? %>
+  <div class="show-card d-flex pt-3">
+    <div class="plant-info">
+      <h1><%= @plant.name %></h1>
+      <p><%= @plant.description %></p>
+      <p>£<%= @plant.price_per_day %></p>
+    </div>
+    <div class="plant-img">
+      <%= image_tag(@plant.photo) if @plant.photo.attached? %>
+    </div>
   </div>
 
   <%= link_to "Book Plant", new_plant_booking_path(@plant)  %>
