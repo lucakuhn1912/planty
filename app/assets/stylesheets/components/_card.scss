@@ -1,9 +1,21 @@
+.card-container{
+  display: flex;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   padding-top: 16px;
+  flex-grow: 1;
 }
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 20px;
+}
+
 
 @media(max-width: 768px) {
   .cards {
@@ -75,16 +87,22 @@
   }
 }
 
-.plant-card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  &:hover {
-    color: $red;
-  }
+.show-img img{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
 }
+
+// .plant-card-link {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 100;
+//   &:hover {
+//     color: $red;
+//   }
+// }
 
 

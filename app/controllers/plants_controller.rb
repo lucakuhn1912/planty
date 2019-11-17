@@ -6,7 +6,8 @@ class PlantsController < ApplicationController
     @markers = @plants.map do |plant|
       {
         lat: plant.latitude,
-        lng: plant.longitude
+        lng: plant.longitude,
+        infoWindow: render_to_string(partial: "/plants/info_window", locals: { plant: plant })
       }
     end
   end
